@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constrainLayoutCalculationActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CalculationActivity">
+
+        <EditText
+            android:id="@+id/editTextNumbersXInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:ems="10"
+            android:fontFamily="@font/audiowide"
+            android:inputType="numberDecimal"
+            android:tooltipText="Enter a number and click after on Save"
+            app:layout_constraintEnd_toEndOf="@+id/btnSaveNumbersXInput"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/btnSaveNumbersXInput"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextNumbersYInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:fontFamily="@font/audiowide"
+            android:inputType="numberDecimal"
+            android:tooltipText="Enter a number and click after on Save"
+            app:layout_constraintEnd_toEndOf="@+id/btnSaveNumbersXInput"
+            app:layout_constraintStart_toStartOf="@+id/btnSaveNumbersXInput"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSumX" />
+
+        <Button
+            android:id="@+id/btnSaveNumbersXInput"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="56dp"
+            android:drawableLeft="@mipmap/ic_check_save"
+            android:fontFamily="@font/audiowide"
+            android:onClick="editTextViews_XComponents"
+            android:text="save  \nX Number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumbersXInput" />
+
+        <Button
+            android:id="@+id/btnSaveNumbersYInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableLeft="@mipmap/ic_check_save"
+            android:fontFamily="@font/audiowide"
+            android:onClick="editTextViews_YComponents"
+            android:text="save  \nY Number"
+            app:layout_constraintEnd_toEndOf="@+id/editTextNumbersYInput"
+            app:layout_constraintStart_toStartOf="@+id/editTextNumbersYInput"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumbersYInput" />
+
+        <TextView
+            android:id="@+id/textViewNumbersCounterX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/audiowide"
+            android:text="Numbers of X: 1/x"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSaveNumbersXInput" />
+
+        <TextView
+            android:id="@+id/textViewNumbersCounterY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/audiowide"
+            android:text="Numbers of Y: 1/x"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewNumbersCounterX"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewNumbersCounterX"
+            app:layout_constraintTop_toBottomOf="@+id/btnSaveNumbersYInput" />
+
+        <TextView
+            android:id="@+id/textViewSumY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/audiowide"
+            android:text="Sum of Y = xx"
+            android:textColor="#00A"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewSumX"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNumbersCounterY" />
+
+        <TextView
+            android:id="@+id/textViewSumX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/audiowide"
+            android:text="Sum of X = xx"
+            android:textColor="#00A"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewNumbersCounterX"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNumbersCounterX" />
+
+        <TextView
+            android:id="@+id/textViewAverageNumbersX"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/audiowide"
+            android:text="The Average of the x numbers=\n xx.xx"
+            android:textAlignment="center"
+            android:textColor="#00F"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="395dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:background="?android:attr/listDivider"
+            android:foreground="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSumY" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSaveData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="saveData"
+            android:text="Save the calculation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAverageNumbersY" />
+
+        <TextView
+            android:id="@+id/textViewVarianzOutputX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/audiowide"
+            android:text="The variance of X is = xx"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxSaveData" />
+
+        <TextView
+            android:id="@+id/textViewVarianzOutputY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/audiowide"
+            android:text="The variance of Y is = xx"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewVarianzOutputX" />
+
+        <TextView
+            android:id="@+id/textViewAverageNumbersY"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/audiowide"
+            android:text="The Average of the Y numbers=\n xx.xx"
+            android:textAlignment="center"
+            android:textColor="#00F"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <Button
+            android:id="@+id/btnMoveToTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:onClick="openTableCalculation"
+            android:text="Move to Table?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewVarianzOutputY" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
