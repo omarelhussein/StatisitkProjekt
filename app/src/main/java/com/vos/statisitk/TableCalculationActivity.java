@@ -45,11 +45,13 @@ public class TableCalculationActivity extends AppCompatActivity {
      */
     private void fillTableWithMethods() {
         fillXNumbers();
-        fillYNumbers();
         fillXMinusXAverage();
         fillYMinusYAverage();
-        fill_XiMinusXAvg_times_YiMinusYAvg();
         fill_XiMinusXAvgPow();
+        if(array_Y.length < 1)
+            return;
+        fillYNumbers();
+        fill_XiMinusXAvg_times_YiMinusYAvg();
         fill_YiMinusYAvgPow();
     }
 
